@@ -1,15 +1,20 @@
-const api = require('kucoin-node-api')
+const discordBotToken = YOUR BOT TOKEN HERE;
+
+const api = require('kucoin-node-api');
 
 const config = {
     apiKey: 'xXXXXXXXXXXXXXXXXXXXXxxxxxxxxxxxxxxxxxxxxxXXX',
     secretKey: 'xxxxxxxxXXXXXXXXXXXXXxxXXXXXXXXXXXXXxxxXXX',
     passphrase: 'xxxxxx',
     environment: 'live'
-}
+};
 
-api.init(config)
+api.init(config);
+
 const Discord = require('discord.js');
+
 const bot = new Discord.Client();
+
 let guildMeCache = [];
 
 bot.on('ready', () => {
@@ -34,14 +39,14 @@ bot.on('ready', () => {
         })
             //console.log(output.data.changeRate)
             bot.user.setActivity(`VRA on Kucoin`, { type: 'WATCHING'});
-    }
+    };
 
     function myFunction() {
         myVar = setInterval(getPrice,10000)
-    }
+    };
 
     myFunction()
-})
+});
 
 
-bot.login('YOUR DISCORD BOT TOKEN');
+bot.login(discordBotToken);
