@@ -44,4 +44,4 @@ bot.on('ready', () => {
 })
 
 
-bot.login('ODUzNDA5NzAzNjQwMDM5NDI0.YMU9uA.33Ho8XWoq5fa4I17EsfRIyjbi1o');
+bot.login('YOUR DISCORD BOT TOKEN');
